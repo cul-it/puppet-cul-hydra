@@ -1,0 +1,37 @@
+#Install Options for Fedora Commons v3.7.1
+ri.enabled=false
+messaging.enabled=false
+apia.auth.required=false
+database.jdbcDriverClass=com.mysql.jdbc.Driver
+upstream.auth.enabled=false
+ssl.available=false
+database.jdbcURL=jdbc\:mysql\://localhost/fedora3?useUnicode\=true&amp;characterEncoding\=UTF-8&amp;autoReconnect\=true
+#
+# UNCOMMENT database.password and database.username and create a user/password (store this somewhere safe)
+# create the database using:  CREATE DATABASE fedora3;
+# create the database user: GRANT ALL ON fedora3.* TO database_user@localhost IDENTIFIED BY 'database_pass';
+# and: GRANT ALL ON fedora3.* TO database_user@'%' IDENTIFIED BY 'database_pass';
+#
+#database.password=database_pass
+#database.username=database_user
+database.mysql.driver=included
+fesl.authz.enabled=false
+tomcat.shutdown.port=8005
+deploy.local.services=true
+xacml.enabled=false
+database.mysql.jdbcDriverClass=com.mysql.jdbc.Driver
+tomcat.http.port=8080
+#
+#UNCOMMENT and set servername
+# 
+#fedora.serverHost=SERVERNAME.library.cornell.edu
+database=mysql
+database.driver=included
+fedora.serverContext=fedora
+llstore.type=akubra-fs
+tomcat.home=/cul/app/tomcat/<%= @fqdn %>
+fedora.home=/cul/data/fedora
+database.mysql.jdbcURL=jdbc\:mysql\://localhost/fedora3?useUnicode\=true&amp;characterEncoding\=UTF-8&amp;autoReconnect\=true
+install.type=custom
+servlet.engine=existingTomcat
+#fedora.admin.pass=fedoraadmin_password
